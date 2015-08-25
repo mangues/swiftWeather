@@ -25,7 +25,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bvl-gB-MrA">
                                 <rect key="frame" x="194" y="161" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-H9-rvI">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3R1-wi-ANR">
+                                <rect key="frame" x="304" y="215" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="努力加载中..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7g-H9-rvI">
                                 <rect key="frame" x="201" y="359" width="227" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,14 +37,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.26883348076434299" green="0.69404395314387213" blue="0.96446269750595093" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="3R1-wi-ANR" secondAttribute="centerX" constant="-14" id="81h-aZ-5eF"/>
                             <constraint firstAttribute="centerX" secondItem="Bvl-gB-MrA" secondAttribute="centerX" id="9yN-TU-Qs8"/>
                             <constraint firstAttribute="centerX" secondItem="h7g-H9-rvI" secondAttribute="centerX" id="H1U-dP-XYN"/>
                             <constraint firstAttribute="centerX" secondItem="pMb-I7-fne" secondAttribute="centerX" id="swm-70-aj0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="location" destination="pMb-I7-fne" id="E5s-oP-hhY"/>
+                        <outlet property="updateImae" destination="3R1-wi-ANR" id="Ykm-aN-DxT"/>
+                        <outlet property="weather" destination="h7g-H9-rvI" id="qUE-3J-ggk"/>
+                        <outlet property="weatherImage" destination="Bvl-gB-MrA" id="dOF-Rn-5dR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="225" y="106"/>
         </scene>
     </scenes>
 </document>
